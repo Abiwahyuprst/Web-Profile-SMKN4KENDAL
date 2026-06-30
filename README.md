@@ -1,94 +1,56 @@
-# Web Portal SMK Negeri 4 Kendal (SKANIFO)
+# 🏫 Web Portal SMK Negeri 4 Kendal (SKANIFO) — The Ultimate School Hub
 
-Web Portal Resmi SMK Negeri 4 Kendal yang dirancang menggunakan HTML5, Vanilla CSS, Native JavaScript, PHP, dan MySQL. Proyek ini dilengkapi dengan fitur pendaftaran PPDB online, Buku Tamu digital, Formulir Hubungi Kami, dan Panel Administrasi khusus untuk mengelola data.
-
----
-
-## 🚀 Panduan Instalasi & Penggunaan (Local Server)
-
-Untuk menjalankan seluruh fitur website termasuk database dan formulir dinamis, Anda memerlukan server lokal. Kami merekomendasikan menggunakan **XAMPP**.
-
-### Langkah 1: Persiapan Berkas Proyek
-1. Unduh (download) atau klon repositori ini dari GitHub.
-2. Pindahkan folder proyek bernama `Web Sekolah` ke dalam direktori server lokal Anda:
-   * **Windows (XAMPP)**: `C:\xampp\htdocs\Web Sekolah`
-   * **macOS (XAMPP)**: `/Applications/XAMPP/htdocs/Web Sekolah`
-   * **Linux (LAMP/Apache)**: `/var/www/html/Web Sekolah`
-
-### Langkah 2: Menjalankan Server Web & Database
-1. Buka aplikasi **XAMPP Control Panel**.
-2. Klik tombol **Start** pada modul **Apache** dan **MySQL**. Pastikan keduanya berwarna hijau.
-
-### Langkah 3: Konfigurasi Database
-1. Buka web browser Anda (Firefox, Chrome, dll) lalu akses halaman **phpMyAdmin**:
-   ```
-   http://localhost/phpmyadmin
-   ```
-2. Buat database baru dengan mengklik menu **New** (Baru), masukkan nama database: `db_sekolah`, lalu klik **Create** (Buat).
-3. Pilih database `db_sekolah` yang baru dibuat, lalu buka tab **Import** (Impor).
-4. Klik tombol **Choose File** (Pilih Berkas) dan pilih file `database.sql` yang ada di root folder proyek ini.
-5. Gulir ke bawah dan klik tombol **Import / Go** (Kirim) untuk mengeksekusi script SQL.
-
-### Langkah 4: Mengakses Web Portal
-Akses website melalui browser Anda menggunakan alamat berikut:
-```
-http://localhost/Web Sekolah/
-```
-* **Halaman Depan**: `http://localhost/Web Sekolah/index.html`
-* **Halaman Kontak**: `http://localhost/Web Sekolah/pages/kontak.html`
-* **Panel Admin**: `http://localhost/Web Sekolah/admin/login.php`
-
-### 🔑 Akun Administrator Default
-* **Username**: `admin`
-* **Password**: `admin123`
+Web Portal Resmi SKANIFO yang dirancang super *clean*, modern, dan dinamis. Proyek ini memadukan kolaborasi maut antara **HTML5, Vanilla CSS, Native JavaScript, PHP, dan MySQL**. Web ini udah *full-package* dengan fitur pendaftaran PPDB online, Buku Tamu digital, Form Kontak, sampai Panel Dashboard khusus Admin buat kelola data secara *sat-set*.
 
 ---
 
-## 🛠️ Panduan Troubleshooting Kompatibilitas Firefox
+## 🛠️ Behind The Scenes : Alur Pembuatan Proyek (Dari Zero ke Hero)
 
-### 1. Masalah: Formulir database memunculkan dialog peringatan protokol `file://`
-* **Gejala**: Ketika Anda mengklik formulir seperti PPDB, Buku Tamu, atau Hubungi Kami, muncul peringatan kompatibilitas dan data gagal dikirim.
-* **Penyebab**: Anda membuka file HTML secara langsung dari folder explorer (pada URL browser tertulis `file:///C:/xampp/...`). Protokol `file://` membatasi permintaan AJAX karena aturan keamanan browser (*Same-Origin Policy*) dan browser tidak dapat mengeksekusi kode PHP backend secara mandiri.
-* **Solusi**: Akses halaman web Anda menggunakan server lokal dengan protokol `http://` (seperti yang dijelaskan pada **Langkah 4** di atas):
-  ```
-  http://localhost/Web Sekolah/
-  ```
+Proyek ini nggak langsung jadi gitu aja, gaes. Ada proses terstruktur (*SDLC era*) yang dilalui dari awal nyusun ide sampe webnya siap di-deploy:
 
-### 2. Masalah: Konsol Firefox menampilkan error `CORS Request Not HTTP` saat memuat komponen Navbar/Footer
-* **Gejala**: Desain Navbar atau Footer tidak muncul, dan konsol browser (F12) menampilkan pesan *CORS Request Not HTTP*.
-* **Penyebab**: Kebijakan keamanan Firefox secara default sangat ketat terhadap permintaan berkas lokal (`fetch` berkas komponen `.html` lain) ketika halaman induk dibuka melalui protokol `file://`.
-* **Solusi**:
-  1. **Solusi Terbaik (Direkomendasikan)**: Jalankan proyek melalui localhost (`http://localhost/...`) agar seluruh request menggunakan protokol HTTP yang aman dan legal.
-  2. **Solusi Alternatif (Hanya jika ingin melihat tampilan offline tanpa database)**:
-     * Buka tab baru di Firefox, ketik `about:config` di address bar, lalu tekan Enter.
-     * Klik tombol **Accept the Risk and Continue**.
-     * Cari konfigurasi bernama: `security.fileuri.strict_origin_policy`.
-     * Klik dua kali pada nama tersebut untuk mengubah nilainya dari `true` menjadi `false`.
-     * Muat ulang (*refresh*) halaman web lokal Anda. Sekarang komponen Navbar dan Footer akan muncul dengan normal. (Catatan: Fitur kirim data database ke PHP tetap tidak akan bekerja hingga Anda memindahkannya ke localhost).
+1. **Tahap 1: Brainstorming & Analisis Kebutuhan (The Core Idea)**
+   * **Goal**: Nentuin fitur esensial apa aja yang wajib ada biar sekolah makin digital.
+   * **Result**: Kita sepakat buat bikin halaman utama yang informatif, plus 3 fitur interaktif (PPDB, Buku Tamu, Kontak) dan satu gerbang rahasia alias *Dashboard Admin*.
 
-### 3. Masalah: Masalah Preflight CORS saat dijalankan di server terpisah (CORS Preflight Blocked)
-* **Gejala**: Tombol kirim formulir memicu error jaringan di konsol Firefox yang bertuliskan *Cross-Origin Request Blocked*.
-* **Penyebab**: Selama masa pengembangan, Anda mungkin menjalankan frontend pada port yang berbeda (misalnya VS Code Live Server di port `5500`) sedangkan PHP berjalan di XAMPP port `80`. Firefox menganggap ini sebagai permintaan lintas-domain (*Cross-Origin*) dan mengirimkan request `OPTIONS` (Preflight) sebelum melakukan request `POST` utama. Jika server tidak mendukung `OPTIONS`, browser memblokir request tersebut.
-* **Solusi**: Kode API PHP pada proyek ini sudah kami perbarui secara otomatis untuk menangani request `OPTIONS` (Preflight). Pastikan baris kode penanganan header berikut tetap berada di bagian atas file PHP Anda di folder `/api/`:
-  ```php
-  header('Access-Control-Allow-Origin: *');
-  header('Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With');
-  header('Access-Control-Allow-Methods: POST, OPTIONS');
-  
-  if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-      http_response_code(200);
-      exit();
-  }
-  ```
+2. **Tahap 2: Arsitektur No-Debat (Perancangan UI & Database)**
+   * **Modular System**: Biar gak pusing *copy-paste* kode berulang kali, komponen kayak Navbar dan Footer dipisah jadi file tersendiri. Efisien dan *maintainable*!
+   * **Data Modeling**: Merancang basis data relasional via MySQL (`db_sekolah`) buat nampung data dari user secara *real-time*.
+   * **Smart Storage**: Informasi jurusan/program keahlian disimpen di file `.json` lokal biar *load*-nya cepet tanpa perlu nge-bebanin database.
+
+3. **Tahap 3: Ngoding Era (Implementasi & Eksekusi)**
+   * **Frontend**: Sisi tampilan disikat habis pake HTML5 (struktur semantik) dan Vanilla CSS (layouting responsif tanpa framework biar super enteng). JavaScript bertugas buat narik data (*fetch API*) secara asinkron.
+   * **Backend**: Logika di balik layar diproses pake Native PHP buat ngehandle validasi formulir dan sesi (*session*) login admin biar aman.
+
+4. **Tahap 4: Bug Hunting & Penyembuhan (Testing & Troubleshooting)**
+   * Menguji coba fungsi form di berbagai browser. Di tahap ini, kita nemu beberapa kendala proteksi ketat (CORS dan file protocol) di Firefox, lalu langsung kita racik solusinya (bisa cek di bagian *Troubleshooting* di bawah).
 
 ---
 
-## 📁 Struktur Direktori Utama
-* `/admin/`: Berisi halaman admin dashboard, autentikasi login administrator, dan hapus data.
-* `/api/`: Berisi logika backend PHP (`koneksi.php`, submit formulir, penanganan CORS).
-* `/assets/`: Berisi aset statis seperti CSS, logo/gambar sekolah, dan JavaScript utama (`script.js`).
-* `/components/`: Berisi komponen global web (`navbar.html` & `footer.html`) untuk modularitas.
-* `/data/`: Berisi berkas JSON untuk data program keahlian dan berita dinamis.
-* `/pages/`: Berisi halaman-halaman informasi sekunder sekolah.
-* `database.sql`: Skrip SQL untuk inisialisasi database dan tabel.
-* `index.html`: Halaman utama website.
+## 📊 Specs & Tech Stack Anti-Ribet
+
+| Teknologi | Peran / Tugas Utamanya |
+| :--- | :--- |
+| **HTML5 & Vanilla CSS** | Pondasi dasar web dan bikin visual antarmuka (UI) yang estetik plus responsif di HP/Laptop. |
+| **Native JavaScript** | Bikin web makin hidup, ngurusin manipulasi DOM, dan nge-load komponen modular pake `fetch()`. |
+| **Native PHP** | Otak di balik layar yang ngurusin arus data, validasi input, dan keamanan akun admin. |
+| **MySQL** | Rumah utama tempat nyimpen data pendaftar PPDB, pesan buku tamu, dan password admin. |
+
+---
+
+## 📁 POV: Isi Folder Proyek (Struktur Direktori)
+
+Biar gak tersesat pas bedah kode, ini dia peta struktur folder utamanya:
+
+```files
+📂 Web Sekolah/
+├── 📂 admin/          # Area admin (Dashboard, login.php, & sistem kelola data)
+├── 📂 api/            # Mesin PHP (koneksi.php, pengolah form, & konfigurasi CORS)
+├── 📂 assets/         # Gudang aset statis
+│   ├── 📂 css/        # File styling utama (style.css)
+│   ├── 📂 img/        # Foto, ilustrasi, dan logo resmi SKANIFO
+│   └── 📂 js/         # Script logika frontend (script.js)
+├── 📂 components/     # Komponen modular yang sering dipake (navbar.html & footer.html)
+├── 📂 data/           # Penyimpanan data statis berbasis JSON (Berita & Jurusan)
+├── 📂 pages/          # Halaman informasi pelengkap (Kontak, Profil Jurusan, dll.)
+├── database.sql       # File SQL buat nge-import tabel database kamu
+└── index.html         # Pintu gerbang utama / Landing page website
