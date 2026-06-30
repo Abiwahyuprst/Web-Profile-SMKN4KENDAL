@@ -1,4 +1,4 @@
-# 🏫 Website SMK Negeri 4 Kendal (SKANIFO) — The Ultimate School Hub
+# 🏫 Website SMK Negeri 4 Kendal — The Ultimate School Hub
 
 Website SKANIFO yang dirancang super *clean*, modern, dan dinamis. Proyek ini memadukan kolaborasi maut antara **HTML5, Vanilla CSS, Native JavaScript, PHP, dan MySQL**. Web ini udah *full-package* dengan fitur pendaftaran PPDB online, Buku Tamu digital, Form Kontak, sampai Panel Dashboard khusus Admin buat kelola data secara *sat-set*.
 
