@@ -1,0 +1,813 @@
+/* === Variables & Resets === */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #60a5fa;
+    --secondary: #0ea5e9;
+    --accent: #f59e0b;
+
+    --bg-light: #f8fafc;
+    --bg-white: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --text-light: #f1f5f9;
+
+    --border-color: rgba(0, 0, 0, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-padding {
+    padding: 4rem 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 2rem !important;
+}
+
+.mt-1 {
+    margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.mt-4 {
+    margin-top: 2rem !important;
+}
+
+.mt-5 {
+    margin-top: 4rem !important;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.bg-white {
+    background: var(--bg-white, #ffffff);
+}
+
+.bg-light {
+    background: var(--bg-light, #f8fafc);
+}
+
+/* (Gaya spesifik halaman telah dipindahkan ke style_<nama_halaman>.css) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* === Typography === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-main);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+}
+
+/* === Buttons === */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.btn-login {
+    background: var(--primary, #2563eb); /* Blue Login Button */
+    color: white;
+    border-radius: 50px; /* Fully rounded as seen in screenshot */
+    padding: 0.6rem 1.8rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-login:hover {
+    background: var(--primary-dark, #1d4ed8); /* Darker blue on hover */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
+}
+
+.btn-outline-white {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.btn-outline-white:hover {
+    background: white;
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 0.8rem 1.8rem;
+    font-size: 1.05rem;
+}
+
+/* === Navbar === */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+    transition: var(--transition);
+    min-height: 85px;
+    /* Mengisolasi variabel warna khusus untuk navbar agar selalu tetap biru (konsisten dengan beranda) */
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #60a5fa;
+    --secondary: #0ea5e9;
+    --accent: #2563eb;
+}
+
+.navbar.scrolled {
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.nav-container {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    flex-shrink: 0;
+    /* Prevents logo from shrinking or shifting */
+    user-select: none;
+}
+
+.logo:active {
+    transform: none;
+    /* Ensures logo doesn't scale when clicked */
+}
+
+.logo-img {
+    height: 56px;
+    /* Increased from 48px */
+    width: auto;
+    display: block;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.logo-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.logo-main {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+}
+
+.logo-tagline {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+.highlight-blue {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #334155;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    padding: 0.5rem 0.75rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.nav-links a.active,
+.nav-links a:active,
+.nav-links a.clicked {
+    color: white !important;
+    background: var(--primary) !important;
+    transform: scale(0.98);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 0;
+    max-height: 0;
+    overflow-y: auto;
+    transition: max-height 0.3s ease-out;
+    box-shadow: var(--shadow-md);
+    z-index: 1050;
+}
+
+.mobile-menu.open {
+    max-height: 90vh;
+    padding: 1rem 0;
+}
+
+.mobile-menu a {
+    padding: 1rem 2rem;
+    font-weight: 500;
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-menu a:hover {
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--primary);
+}
+
+.mobile-btn {
+    margin: 1rem 2rem;
+    text-align: center;
+    color: #ffffff !important; /* Paksa warna teks menjadi putih */
+    border-bottom: none !important; /* Hapus garis bawah bawaan item menu */
+}
+
+.mobile-menu a.mobile-btn:hover {
+    background: var(--primary-dark) !important; /* Latar belakang biru gelap saat hover */
+    color: #ffffff !important;
+}
+
+
+/* (Komponen Beranda & Jurusan telah dipindahkan ke file CSS spesifik) */
+
+/* === Footer Section === */
+.footer {
+    background: #1e1b18;
+    /* Dark brown/slate as per reference */
+    color: rgba(255, 255, 255, 0.8);
+    padding: 6rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-info .logo {
+    margin-bottom: 1.5rem;
+}
+
+.footer-info .logo-img {
+    height: 65px;
+    width: auto;
+}
+
+.footer-info .logo-main {
+    color: white;
+    font-size: 1.35rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.footer-info .logo-tagline {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.footer-desc {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 320px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-column h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    font-weight: 600;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.75);
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact-item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: flex-start;
+    margin-bottom: 1.2rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-contact-item i {
+    color: var(--primary-light);
+    font-size: 1.4rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-legal {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-legal a {
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
+/* === Responsive Design === */
+@media (max-width: 1024px) {
+    .nav-links,
+    .nav-actions .btn {
+        display: none !important;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+}
+
+/* Micro-animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* === New Components (Phase 3) === */
+/* Mega Menu Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-white);
+    min-width: 220px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0.5rem;
+    flex-direction: column;
+}
+
+.dropdown-content a {
+    color: #475569;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transition: var(--transition);
+    background: transparent;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(37, 99, 235, 0.08);
+    color: var(--primary);
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* Fix mobile overflow for mega menu */
+@media (max-width: 1024px) {
+    .dropdown-content {
+        position: static;
+        display: none;
+        grid-template-columns: 1fr;
+        min-width: 100%;
+        box-shadow: none;
+        border: none;
+        padding: 0.5rem 0;
+        background: transparent;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: grid;
+    }
+}
+
+/* Icons in Navbar */
+.nav-icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.nav-icon-btn:hover {
+    color: var(--primary);
+    background: var(--bg-light);
+}
+
+
+
+/* Breadcrumbs */
+.breadcrumbs {
+    padding: 1.5rem 0;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.breadcrumbs-list {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.breadcrumbs-list a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.breadcrumbs-list a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs-separator {
+    color: var(--text-muted);
+}
+
+.breadcrumbs-current {
+    color: var(--text-muted);
+}
+
+/* === Responsive Overrides for Global Base === */
+@media (max-width: 1024px) {
+    .logo-img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .berita-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1.2rem !important;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img {
+        height: 44px;
+    }
+    
+    .logo-main {
+        font-size: 1.15rem;
+    }
+    
+    .logo-tagline {
+        font-size: 0.68rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+/* Page Header Global Settings */
+.page-header,
+.page-header-jurusan {
+    position: relative;
+    padding: 8rem 0 4rem;
+    color: white !important;
+    text-align: center;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-color: #0f172a !important; /* Fallback background color */
+    overflow: hidden;
+}
+
+.page-header {
+    background-position: center 30% !important;
+}
+
+.page-header-jurusan {
+    background-position: center !important;
+}
+
+/* Gradient Overlay via Pseudo-Element */
+.page-header::before,
+.page-header-jurusan::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.75) !important; /* Reliable solid overlay color */
+    z-index: 1;
+}
+
+/* Ensure container content displays above the overlay */
+.page-header .container,
+.page-header-jurusan .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Page Header Paragraph Styling */
+.page-header p,
+.page-header-jurusan p {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Akhir dari Global Base Stylesheet */

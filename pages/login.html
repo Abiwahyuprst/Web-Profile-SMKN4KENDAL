@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin | SMK Negeri 4 Kendal</title>
+    <meta name="description" content="Login administrator SMK Negeri 4 Kendal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.0.4">
+    <link rel="stylesheet" href="../assets/css/style_login.css?v=1.0.0">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar"></nav>
+
+    <main class="login-container">
+        <div class="container">
+            <div class="login-wrapper">
+                
+                <div class="login-info">
+                    <h1>Login <span>Admin</span></h1>
+                    <p>Silahkan masuk untuk mengelola sistem admin ini</p>
+                </div>
+
+                <div class="login-card">
+                    <div class="login-icon-wrapper">
+                        <i class="ph-fill ph-lock-key"></i>
+                    </div>
+                    <h2>Panel Administrasi</h2>
+                    <p class="subtitle">Masuk dengan akun admin untuk mengelola website</p>
+
+                    <form action="#" method="POST" class="login-form">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <div class="input-with-icon">
+                                <i class="ph ph-envelope icon-left"></i>
+                                <input type="email" id="email" name="email" placeholder="admin@sekolah.sch.id" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-with-icon">
+                                <i class="ph ph-lock icon-left"></i>
+                                <input type="password" id="password" name="password" placeholder="••••••" required>
+                                <i class="ph ph-eye icon-right"></i>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn-submit-login" onclick="alert('Ini adalah simulasi login. Modul backend belum diimplementasikan.')">Masuk</button>
+                    </form>
+                    
+                    <div class="login-notes">
+                        <h4>Catatan:</h4>
+                        <ul>
+                            <li>Halaman ini hanya untuk administrator</li>
+                            <li>Hubungi admin IT jika lupa password</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/script.js?v=1.0.3"></script>
+</body>
+
+</html>

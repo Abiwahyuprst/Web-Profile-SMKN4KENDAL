@@ -1,0 +1,37 @@
+/* === Transparansi Dana BOS Specific Styles === */
+.bos-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: var(--shadow-sm, 0 10px 30px rgba(0,0,0,0.05));
+    border: 1px solid var(--border-color, #e2e8f0);
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.bos-recap-box {
+    background: var(--bg-light, #f8fafc);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid var(--border-color, #e2e8f0);
+    margin-bottom: 2rem;
+}
+
+.bos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--text-muted, #64748b);
+}
+
+.bos-list-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.bos-list-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}

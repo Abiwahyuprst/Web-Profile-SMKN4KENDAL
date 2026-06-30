@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Tamu | SMK Negeri 4 Kendal</title>
+    <meta name="description" content="Buku tamu digital SMK Negeri 4 Kendal untuk mencatat kunjungan, pesan, dan kesan dari masyarakat atau instansi mitra.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_buku-tamu.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar"></nav>
+
+    <header class="page-header" style="background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('../assets/img/berita/Profil%20Berita.webp'); background-size: cover; background-position: center; padding: 8rem 0 4rem; color: white; text-align: center;">
+        <div class="container">
+            <h1 class="section-title" style="color: white; margin-bottom: 0.5rem;">Buku Tamu Digital</h1>
+            <p style="opacity: 0.9; max-width: 600px; margin: 0 auto;">Tinggalkan pesan, kesan, atau keperluan kunjungan Anda pada sistem buku tamu digital kami.</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="../index.html"><i class="ph ph-house"></i> Beranda</a>
+                <span class="breadcrumbs-separator"><i class="ph ph-caret-right"></i></span>
+                <span class="breadcrumbs-current">Buku Tamu</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="page-content" style="padding: 4rem 0;">
+        <div class="container">
+            <div style="max-width: 750px; margin: 0 auto; background: #ffffff; border-radius: 16px; padding: 3rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                <h2 style="color: var(--primary); margin-bottom: 2rem; font-size: 1.8rem; display: flex; align-items: center; gap: 0.75rem;">
+                    <i class="ph ph-notebook"></i> Formulir Buku Tamu
+                </h2>
+                <form id="formBukuTamu" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <div>
+                        <label for="nama" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);">Nama Lengkap *</label>
+                        <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda" style="width: 100%; padding: 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                    </div>
+                    <div>
+                        <label for="instansi" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);">Asal Instansi / Perusahaan / Pribadi *</label>
+                        <input type="text" id="instansi" name="instansi" required placeholder="Contoh: PT. Maritim Nusantara / Orang Tua Siswa" style="width: 100%; padding: 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                    </div>
+                    <div>
+                        <label for="email" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);">Alamat Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="Masukkan email aktif Anda" style="width: 100%; padding: 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 1rem;">
+                    </div>
+                    <div>
+                        <label for="tujuan" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-main);">Tujuan Kunjungan / Pesan *</label>
+                        <textarea id="tujuan" name="tujuan" rows="5" required placeholder="Tuliskan tujuan kunjungan, pesan, atau kesan Anda di sini..." style="width: 100%; padding: 1rem; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; font-weight: 600; border-radius: 8px; cursor: pointer; align-self: flex-start;">Kirim Pesan Buku Tamu</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

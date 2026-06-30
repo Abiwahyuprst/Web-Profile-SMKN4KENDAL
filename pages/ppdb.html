@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran PPDB | SMK Negeri 4 Kendal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style_ppdb.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar"></nav>
+
+    <header class="page-header" style="background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 8rem 0 4rem; color: white; text-align: center;">
+        <div class="container">
+            <h1 class="section-title" style="color: white;">Pendaftaran Siswa Baru</h1>
+            <p style="opacity: 0.9;">Tahun Ajaran 2026/2027</p>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="../index.html"><i class="ph ph-house"></i> Beranda</a>
+                <span class="breadcrumbs-separator"><i class="ph ph-caret-right"></i></span>
+                <span class="breadcrumbs-current">Daftar PPDB</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="page-content" style="padding: 4rem 0; background: var(--bg-light);">
+        <div class="container">
+            <div class="ppdb-card">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Formulir Pendaftaran</h2>
+                <form id="formPPDB">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap <span style="color: red;">*</span></label>
+                        <input type="text" id="nama" placeholder="Sesuai Ijazah SMP/MTs" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="asal_sekolah">Asal Sekolah <span style="color: red;">*</span></label>
+                        <input type="text" id="asal_sekolah" placeholder="Nama SMP/MTs" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jurusan">Pilihan Jurusan <span style="color: red;">*</span></label>
+                        <select id="jurusan" required>
+                            <option value="" disabled selected>Pilih Program Keahlian...</option>
+                            <option value="pplg">Pengembangan Perangkat Lunak & Gim (PPLG)</option>
+                            <option value="tkro">Teknik Kendaraan Ringan Otomotif (TKRO)</option>
+                            <option value="tkj">Teknik Komputer & Jaringan (TKJ)</option>
+                            <option value="ap">Akuntansi dan Keuangan Lembaga (AKL)</option>
+                            <option value="kuliner">Tata Boga / Kuliner</option>
+                            <option value="nkpi">Nautika Kapal Penangkap Ikan (NKPI)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hp">Nomor WhatsApp Aktif <span style="color: red;">*</span></label>
+                        <input type="tel" id="hp" placeholder="08xx xxxx xxxx" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large" style="width: 100%; margin-top: 1rem;">Kirim Pendaftaran</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

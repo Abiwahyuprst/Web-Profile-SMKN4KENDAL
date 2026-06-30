@@ -1,0 +1,137 @@
+/* === Berita Grid & News Card === */
+.berita-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.berita-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.news-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-light, #93c5fd);
+}
+
+.news-image-box {
+    width: 100%;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image-box img {
+    transform: scale(1.1);
+}
+
+.news-image-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, transparent 100%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.news-date-badge {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1.5rem;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 10;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.news-date-badge i {
+    font-size: 1.1rem;
+}
+
+.news-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main, #0f172a);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.news-card:hover .news-content h3 {
+    color: var(--primary, #2563eb);
+}
+
+.news-content p {
+    color: var(--text-muted, #64748b);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.news-link {
+    margin-top: auto;
+    color: #ea580c;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    transition: var(--transition, all 0.3s ease);
+}
+
+.news-link:hover {
+    gap: 0.8rem;
+    color: #c2410c;
+}
+
+/* === Responsive Design === */
+@media (max-width: 1024px) {
+    .berita-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .berita-grid {
+        grid-template-columns: 1fr;
+    }
+}

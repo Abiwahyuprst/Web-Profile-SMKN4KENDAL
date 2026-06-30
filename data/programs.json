@@ -1,0 +1,62 @@
+[
+    {
+        "id": "pplg",
+        "title": "Rekayasa Perangkat Lunak ",
+        "short_desc": "Mempelajari Pengembangan Perangkat Lunak, Aplikasi dan Web",
+        "icon": "ph-code",
+        "color": "bg-blue",
+        "url": "pplg.html",
+        "image": "assets/img/rpl/JRPL.webp",
+        "logo": "assets/img/logo/logo-jurusan/rpl.webp"
+    },
+    {
+        "id": "tkj",
+        "title": "Teknik Komputer dan Jaringan",
+        "short_desc": "Membekali siswa dengan keahlian jaringan komputer, administrasi server, dan keamanan siber.",
+        "icon": "ph-desktop",
+        "color": "bg-teal",
+        "url": "tkj.html",
+        "image": "assets/img/tkj/JTKJ.webp",
+        "logo": "assets/img/logo/logo-jurusan/tkj.webp"
+    },
+    {
+        "id": "kuliner",
+        "title": "Kuliner / Tata Boga",
+        "short_desc": "Membekali siswa dengan keterampilan pengolahan makanan dan manajemen restoran.",
+        "icon": "ph-cooking-pot",
+        "color": "bg-red-light",
+        "url": "kuliner.html",
+        "image": "assets/img/kuliner/JKULINER.webp",
+        "logo": "assets/img/logo/logo-jurusan/kuliner.webp"
+    },
+    {
+        "id": "tkro",
+        "title": "Teknik Kendaraan Ringan Otomotif",
+        "short_desc": "Fokus pada perawatan, perbaikan, dan teknologi mesin kendaraan ringan masa kini.",
+        "icon": "ph-wrench",
+        "color": "bg-orange",
+        "url": "tkro.html",
+        "image": "assets/img/tkro/JTKRO.webp",
+        "logo": "assets/img/logo/logo-jurusan/tkro.webp"
+    },
+    {
+        "id": "ap",
+        "title": "Agribisnis Perikanan",
+        "short_desc": "Mempelajari teknik budidaya ikan, manajemen kualitas air, dan kewirausahaan perikanan.",
+        "icon": "ph-fish",
+        "color": "bg-blue-light",
+        "url": "ap.html",
+        "image": "assets/img/ap/JAP.webp",
+        "logo": "assets/img/logo/logo-jurusan/apat.webp"
+    },
+    {
+        "id": "nkpi",
+        "title": "Nautika Kapal Penangkap Ikan",
+        "short_desc": "Fokus pada navigasi laut, pengoperasian alat tangkap ikan, dan keselamatan pelayaran.",
+        "icon": "ph-anchor",
+        "color": "bg-indigo-light",
+        "url": "nkpi.html",
+        "image": "assets/img/nkpi/JNKPI.webp",
+        "logo": "assets/img/logo/logo-jurusan/nkpi.webp"
+    }
+]

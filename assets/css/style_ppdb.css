@@ -1,0 +1,38 @@
+/* === PPDB Pendaftaran Specific Styles === */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-main, #0f172a);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--primary, #2563eb);
+}
+
+.ppdb-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg, 0 20px 40px rgba(0,0,0,0.1));
+    border: 1px solid var(--border-color, #e2e8f0);
+    max-width: 600px;
+    margin: 0 auto;
+}

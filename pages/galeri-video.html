@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Video | SMK Negeri 4 Kendal</title>
+    <meta name="description"
+        content="Kumpulan dokumentasi video kegiatan, profil jurusan, prestasi, dan aktivitas taruna-taruni SMK Negeri 4 Kendal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.0.3">
+    <link rel="stylesheet" href="../assets/css/style_galeri.css?v=1.0.3">
+
+    <style>
+        /* === Custom Video Play Button Style === */
+        .video-card {
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .video-play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 3.8rem;
+            z-index: 10;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+        }
+
+        .video-card:hover .video-play-overlay {
+            transform: translate(-50%, -50%) scale(1.15);
+            color: var(--primary, #2563eb);
+        }
+
+        .video-card .news-image-box::after {
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.7) 0%, transparent 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar"></nav>
+
+    <!-- Header Galeri Video -->
+    <header class="page-header" style="background-image: url('../assets/img/profil/bgprofil.webp');">
+        <div class="container">
+            <h1 class="section-title" style="color: white; margin-bottom: 0.5rem;">Galeri Video</h1>
+            <p style="opacity: 0.9; max-width: 600px; margin: 0 auto;">Dokumentasi video berharga, profil program
+                keahlian, prestasi taruna-taruni, dan liputan kegiatan sekolah.</p>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="../index.html"><i class="ph ph-house"></i> Beranda</a>
+                <span class="breadcrumbs-separator"><i class="ph ph-caret-right"></i></span>
+                <span class="breadcrumbs-current">Galeri Video</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="page-content" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="berita-grid">
+
+                <!-- Video 1: Terang Layar Gelap Pikiran -->
+                <!-- TAUTAN YOUTUBE BISA DIUBAH DI BAWAH INI (HREF) -->
+                <a href="https://youtu.be/w4q8ZSgj9zU?si=6Elm2k7qensmccTN" target="_blank"
+                    class="news-card animate-fade-in video-card">
+                    <div class="news-image-box">
+                        <img src="../assets/img/galeri/sampul youtube 1.webp" alt="Terang Layar Gelap Pikiran">
+                        <div class="video-play-overlay">
+                            <i class="ph-fill ph-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="news-content" style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">TERANG LAYAR GELAP PIKIRAN</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">2026-03-09</p>
+                    </div>
+                </a>
+
+                <!-- Video 2: Anatomi Informasi -->
+                <!-- TAUTAN YOUTUBE BISA DIUBAH DI BAWAH INI (HREF) -->
+                <a href="https://youtu.be/6Ey-AP0oR-4?si=T9rOrqPe_i1Kdya8" target="_blank"
+                    class="news-card animate-fade-in video-card">
+                    <div class="news-image-box">
+                        <img src="../assets/img/galeri/sampul youtube 2.webp" alt="Anatomi Informasi">
+                        <div class="video-play-overlay">
+                            <i class="ph-fill ph-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="news-content" style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">ANATOMI INFORMASI</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">2026-02-23</p>
+                    </div>
+                </a>
+
+                <!-- Video 3: Video Perpisahan Skanifo 2025 -->
+                <!-- TAUTAN YOUTUBE BISA DIUBAH DI BAWAH INI (HREF) -->
+                <a href="https://youtu.be/sKe1fP9vp-o?si=hJPRIiSXvvSPoy8c" target="_blank"
+                    class="news-card animate-fade-in video-card">
+                    <div class="news-image-box">
+                        <img src="../assets/img/galeri/sampul youtube 3.webp" alt="Video Perpisahan Skanifo 2025">
+                        <div class="video-play-overlay">
+                            <i class="ph-fill ph-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="news-content" style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Video Perpisahan Skanifo 2025</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">2025-05-09</p>
+                    </div>
+                </a>
+
+                <!-- Video 4: Tari Kreasi Baru FLS3N -->
+                <!-- TAUTAN YOUTUBE BISA DIUBAH DI BAWAH INI (HREF) -->
+                <a href="https://youtu.be/xVmELMAw4tg?si=7hvvbzfCUrMKRVnE" target="_blank"
+                    class="news-card animate-fade-in video-card">
+                    <div class="news-image-box">
+                        <img src="../assets/img/galeri/sampul youtube 4.webp" alt="Video Profil Jurusan TITL">
+                        <div class="video-play-overlay">
+                            <i class="ph-fill ph-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="news-content" style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Teaching Factory (TEFA) Tahun 2024
+                            Konsentrasi Keahlian Kuliner SMK Negeri 4 Kenda</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">2024-12-30</p>
+                    </div>
+                </a>
+
+                <!-- Video 5: Praktik Jurusan PPLG -->
+                <!-- TAUTAN YOUTUBE BISA DIUBAH DI BAWAH INI (HREF) -->
+                <a href="https://youtu.be/Q53sZYtKCEs?si=vUML0rhMk-C0PZUt" target="_blank"
+                    class="news-card animate-fade-in video-card">
+                    <div class="news-image-box">
+                        <img src="../assets/img/galeri/sampul youtube 5.webp" alt="Kegiatan Praktik Jurusan PPLG">
+                        <div class="video-play-overlay">
+                            <i class="ph-fill ph-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="news-content" style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Teaching Factory (TEFA) Tahun 2024
+                            Konsentrasi Keahlian APAT SMK Negeri 4 Kendal</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">2024-12-30</p>
+                    </div>
+                </a>
+
+                <!-- Video 6: Praktik Jurusan TKJ -->
+                <!-- TAUTAN YOUTUBE BISA DIUBAH DI BAWAH INI (HREF) -->
+                <a href="https://youtu.be/3BXrYjMHHNI?si=AipPYbuBOzp_KWhr" target="_blank"
+                    class="news-card animate-fade-in video-card">
+                    <div class="news-image-box">
+                        <img src="../assets/img/tkj/JTKJ.webp" alt="Kegiatan Praktik Jurusan TKJ">
+                        <div class="video-play-overlay">
+                            <i class="ph-fill ph-play-circle"></i>
+                        </div>
+                    </div>
+                    <div class="news-content" style="padding: 1.5rem;">
+                        <h3 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Teaching Factory (TEFA) Tahun 2024
+                            Konsentrasi Keahlian Teknik Komputer Jaringan SMK Negeri 4 Kendal</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 0;">2024-02-12</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+    <script src="../assets/js/script.js?v=1.0.2"></script>
+</body>
+
+</html>

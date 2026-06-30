@@ -1,0 +1,310 @@
+/* === Profil & Struktur Organisasi Specific Styles === */
+.main-article {
+    background: white;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color, #e2e8f0);
+    margin-bottom: 3rem;
+}
+
+.main-article h2 {
+    color: var(--primary, #2563eb);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.main-article p {
+    color: var(--text-muted, #64748b);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+/* === Sidebar === */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-section {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color, #e2e8f0);
+}
+
+.sidebar-section h4 {
+    font-size: 1.25rem;
+    color: var(--text-main, #0f172a);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted, #64748b);
+    font-size: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+}
+
+.sidebar-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.sidebar-list li a {
+    color: var(--text-main, #0f172a);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar-list li a:hover {
+    color: var(--primary, #2563eb);
+}
+
+/* === Organization Chart Tree Styles === */
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 4rem;
+    position: relative;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.org-level-2 {
+    gap: 1.5rem;
+    position: relative;
+}
+
+/* Horizontal connecting line above Level 2 */
+.org-level-2::before {
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    left: calc(12.5%);
+    right: calc(12.5%);
+    height: 2px;
+    background-color: var(--border-color, #cbd5e1);
+}
+
+.org-level-2-items {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+/* Horizontal connecting line above Level 2 Items (2 nodes) */
+.org-level-2-items::before {
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    left: 25%;
+    right: 25%;
+    height: 2px;
+    background-color: var(--border-color, #cbd5e1);
+}
+
+.org-level-1-item {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.org-level-3-items {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+/* Horizontal connecting line above Level 3 Items (3 nodes) */
+.org-level-3-items::before {
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    left: 16.66%;
+    right: 16.66%;
+    height: 2px;
+    background-color: var(--border-color, #cbd5e1);
+}
+
+.org-connector-vertical {
+    width: 2px;
+    height: 1.5rem;
+    background-color: var(--border-color, #cbd5e1);
+    margin: 0 auto;
+}
+
+.org-node {
+    background: white;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    min-width: 160px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Vertical line above each Level 2 node */
+.org-level-2 .org-node::before,
+.org-level-2-items .org-node::before,
+.org-level-1-item .org-node::before,
+.org-level-3-items .org-node::before {
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1.5rem;
+    background-color: var(--border-color, #cbd5e1);
+}
+
+a.org-node:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgb(255, 255, 255);
+    border-color: var(--primary, #2563eb);
+}
+
+.org-node-principal {
+    background: #167cf9;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 320px;
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.2);
+}
+
+.org-node-principal .org-node-role {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.org-node-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 3px solid white;
+    background: #e2e8f0;
+}
+
+.org-node-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.org-node-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f1f5f9;
+    color: var(--primary, #2563eb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+a.org-node:hover .org-node-icon {
+    background: var(--primary, #2563eb);
+    color: white;
+}
+
+.org-node-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+.org-node-title {
+    font-size: 1rem;
+    color: var(--text-main, #0f172a);
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.org-node-subtitle {
+    font-size: 0.8rem;
+    color: var(--text-muted, #64748b);
+    line-height: 1.4;
+}
+
+/* === Responsive Design === */
+@media (max-width: 1024px) {
+    .page-content .container>div {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .org-level-2,
+    .org-level-2-items,
+    .org-level-1-item,
+    .org-level-3-items {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .org-level-2::before,
+    .org-level-2-items::before,
+    .org-level-3-items::before {
+        display: none;
+    }
+
+    .org-level-2 .org-node::before,
+    .org-level-2-items .org-node::before,
+    .org-level-1-item .org-node::before,
+    .org-level-3-items .org-node::before {
+        height: 2rem;
+        top: -2rem;
+    }
+
+    .org-connector-vertical {
+        height: 2rem;
+    }
+}

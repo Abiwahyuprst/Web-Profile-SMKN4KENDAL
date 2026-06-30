@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi SPMB | SMK Negeri 4 Kendal</title>
+    <meta name="description" content="Informasi lengkap Seleksi Penerimaan Murid Baru (SPMB) dan PPDB di SMK Negeri 4 Kendal.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css?v=1.0.5">
+    <link rel="stylesheet" href="../assets/css/style_spmb.css?v=1.0.5">
+    <style>
+        /* === Custom Poster Style for SPMB === */
+        .poster-card {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .poster-link {
+            display: block;
+            overflow: hidden;
+            border-radius: 14px;
+            border: 1px solid var(--border-color, #e2e8f0);
+            margin-bottom: 1.2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .poster-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary, #2563eb);
+        }
+        .poster-link img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .poster-link:hover img {
+            transform: scale(1.02);
+        }
+
+        /* === Custom Height Stretch for Requirements === */
+        .requirements-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* Menambah jarak antar item agar kartu lebih panjang */
+            margin-top: 1rem;
+        }
+        .requirements-list li {
+            padding-bottom: 0.6rem;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.05);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .requirements-list li:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        /* === Equal Height Grid Layout === */
+        .spmb-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 2rem;
+            align-items: stretch; /* Membuat semua item sebaris memiliki tinggi yang sama! */
+        }
+        
+        .timeline-card, .workflow-card {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .timeline-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            gap: 1.2rem;
+        }
+        
+        .workflow-steps {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            gap: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .spmb-grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar"></nav>
+
+    <!-- Header Standar dengan Background Gambar -->
+    <header class="page-header" style="background-image: url('../assets/img/profil/bgprofil.webp');">
+        <div class="container">
+            <h1 class="section-title" style="color: white;">Informasi SPMB & PPDB</h1>
+            <p style="opacity: 0.9;">Pusat informasi pendaftaran, persyaratan, jadwal seleksi, dan pengumuman penerimaan siswa baru.</p>
+        </div>
+    </header>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs-list">
+                <a href="../index.html"><i class="ph ph-house"></i> Beranda</a>
+                <span class="breadcrumbs-separator"><i class="ph ph-caret-right"></i></span>
+                <span class="breadcrumbs-current">SPMB</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="page-content" style="padding: 3rem 0 5rem;">
+        <div class="container">
+
+            <!-- Banner Informasi Penting -->
+            <div class="spmb-alert">
+                <div class="alert-icon">
+                    <i class="ph ph-info"></i>
+                </div>
+                <div class="alert-content">
+                    <h3>Informasi Penting</h3>
+                    <p>Pendaftaran SPMB SMK Negeri 4 Kendal Tahun Ajaran 2026/2027 akan segera dibuka. Pantau terus
+                        halaman ini untuk mendapatkan informasi terbaru.</p>
+                </div>
+            </div>
+
+
+
+            <!-- 2. Grid Dua Kolom (Seleksi & Daya Tampung) -->
+            <div class="spmb-two-column-grid">
+                <!-- Kolom Kiri: Seleksi & Kuota Pendaftaran -->
+                <div class="spmb-info-card spmb-quota-card">
+                    <div class="card-title-wrapper">
+                        <div class="card-icon-box bg-visi">
+                            <i class="ph ph-chart-pie-slice"></i>
+                        </div>
+                        <h2>Seleksi & Kuota Pendaftaran</h2>
+                    </div>
+                    <ul class="spmb-list">
+                        <li class="spmb-list-item">
+                            <i class="ph ph-check-circle check-icon"></i>
+                            <div class="quota-detail">
+                                <span class="quota-title">Jalur Prestasi:</span> Kuota sebesar 75%
+                            </div>
+                        </li>
+                        <li class="spmb-list-item">
+                            <i class="ph ph-check-circle check-icon"></i>
+                            <div class="quota-detail">
+                                <span class="quota-title">Jalur Afirmasi:</span> Kuota sebesar 15%
+                                <ul class="spmb-sub-list">
+                                    <li class="spmb-sub-list-item">Penyandang Disabilitas: 2%</li>
+                                    <li class="spmb-sub-list-item">Anak Tidak Mampu & Anak Panti Asuhan: 3%</li>
+                                    <li class="spmb-sub-list-item">Anak Tidak Sekolah (ATS): 2%</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="spmb-list-item">
+                            <i class="ph ph-check-circle check-icon"></i>
+                            <div class="quota-detail">
+                                <span class="quota-title">Jalur Domisili Terdekat:</span> Kuota sebesar 10%
+                                <ul class="spmb-sub-list">
+                                    <li class="spmb-sub-list-item">Domisili Khusus: 5%</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kolom Kanan: Daya Tampung Kompetensi Keahlian -->
+                <div class="spmb-info-card spmb-capacity-card">
+                    <div class="card-title-wrapper">
+                        <div class="card-icon-box bg-misi">
+                            <i class="ph ph-users-three"></i>
+                        </div>
+                        <h2>Daya Tampung Jurusan</h2>
+                    </div>
+                    <div class="spmb-list">
+                        <div class="capacity-row">
+                            <div class="capacity-major">
+                                <span class="major-badge">TO</span> Teknik Otomotif
+                            </div>
+                            <span class="capacity-number">108 Orang</span>
+                        </div>
+                        <div class="capacity-row">
+                            <div class="capacity-major">
+                                <span class="major-badge">PPLG</span> Pengembangan Perangkat Lunak dan Gim
+                            </div>
+                            <span class="capacity-number">108 Orang</span>
+                        </div>
+                        <div class="capacity-row">
+                            <div class="capacity-major">
+                                <span class="major-badge">TJKT</span> Teknik Jaringan Komputer dan Telekomunikasi
+                            </div>
+                            <span class="capacity-number">72 Orang</span>
+                        </div>
+                        <div class="capacity-row">
+                            <div class="capacity-major">
+                                <span class="major-badge">AP</span> Agribisnis Perikanan
+                            </div>
+                            <span class="capacity-number">72 Orang</span>
+                        </div>
+                        <div class="capacity-row">
+                            <div class="capacity-major">
+                                <span class="major-badge">NKPI</span> Nautika Kapal Penangkap Ikan
+                            </div>
+                            <span class="capacity-number">72 Orang</span>
+                        </div>
+                        <div class="capacity-row">
+                            <div class="capacity-major">
+                                <span class="major-badge">KL</span> Kuliner
+                            </div>
+                            <span class="capacity-number">72 Orang</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Saluran Media Sosial Resmi -->
+            <h2 class="spmb-social-section-title">Saluran Informasi Resmi</h2>
+            <div class="spmb-social-channels-grid">
+                <!-- Card Saluran WhatsApp -->
+                <div class="social-channel-card whatsapp">
+                    <div class="channel-info-side">
+                        <div class="channel-header-group">
+                            <div class="platform-logo-wrapper whatsapp">
+                                <i class="ph ph-whatsapp-logo"></i>
+                            </div>
+                            <div>
+                                <h3>Saluran WhatsApp Resmi</h3>
+                                <span class="platform-status">Online & Aktif</span>
+                            </div>
+                        </div>
+                        <p>Dapatkan info tercepat langsung di ponsel Anda. Pindai QR code atau klik tombol di bawah untuk bergabung dengan Saluran WhatsApp Resmi SMKN 4 Kendal dan ikuti update real-time terkait SPMB.</p>
+                        <a href="https://wa.me/628112969000" target="_blank" class="btn-channel whatsapp">
+                            <i class="ph ph-whatsapp-logo"></i> Gabung Saluran WA
+                        </a>
+                    </div>
+                    <div class="channel-qr-side">
+                        <a href="../assets/img/spmb/qr_whatsapp.webp" target="_blank" class="qr-code-link" title="Klik untuk memperbesar poster QR">
+                            <div class="qr-code-frame">
+                                <div class="qr-scan-line"></div>
+                                <img src="../assets/img/spmb/qr_whatsapp.webp" alt="QR Code Saluran WhatsApp SPMB SKANIFO">
+                            </div>
+                        </a>
+                        <span class="qr-caption"><i class="ph ph-scan"></i> Pindai untuk Gabung</span>
+                    </div>
+                </div>
+
+                <!-- Card Saluran Telegram -->
+                <div class="social-channel-card telegram">
+                    <div class="channel-info-side">
+                        <div class="channel-header-group">
+                            <div class="platform-logo-wrapper telegram">
+                                <i class="ph ph-telegram-logo"></i>
+                            </div>
+                            <div>
+                                <h3>Saluran Telegram Resmi</h3>
+                                <span class="platform-status">Online & Aktif</span>
+                            </div>
+                        </div>
+                        <p>Akses berkas pendaftaran, panduan lengkap, serta pengumuman penting secara instan. Bergabunglah dengan Saluran Telegram Resmi kami sekarang juga.</p>
+                        <a href="https://t.me/skanifoofficial" target="_blank" class="btn-channel telegram">
+                            <i class="ph ph-telegram-logo"></i> Gabung Telegram
+                        </a>
+                    </div>
+                    <div class="channel-qr-side">
+                        <a href="../assets/img/spmb/qr_telegram.webp" target="_blank" class="qr-code-link" title="Klik untuk memperbesar poster QR">
+                            <div class="qr-code-frame">
+                                <div class="qr-scan-line"></div>
+                                <img src="../assets/img/spmb/qr_telegram.webp" alt="QR Code Saluran Telegram SPMB SKANIFO">
+                            </div>
+                        </a>
+                        <span class="qr-caption"><i class="ph ph-scan"></i> Pindai untuk Gabung</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Grafik Batang Daya Tampung -->
+            <div class="spmb-chart-card">
+                <h2><i class="ph ph-chart-bar"></i> Grafik Daya Tampung Kompetensi Keahlian</h2>
+                <div class="chart-wrapper">
+                    <!-- Gridlines background -->
+                    <div class="chart-gridlines">
+                        <div class="gridline" data-value="120" style="height: 0%;"></div>
+                        <div class="gridline" data-value="90" style="height: 25%;"></div>
+                        <div class="gridline" data-value="60" style="height: 50%;"></div>
+                        <div class="gridline" data-value="30" style="height: 75%;"></div>
+                        <div class="gridline" data-value="0" style="height: 100%;"></div>
+                    </div>
+
+                    <!-- Bars -->
+                    <div class="chart-bar-container">
+                        <div class="chart-bar bar-to" style="height: 90%;" title="Teknik Otomotif (TO): 108 Orang">
+                            <span class="chart-bar-value">108</span>
+                        </div>
+                        <span class="chart-bar-label">TO</span>
+                    </div>
+                    <div class="chart-bar-container">
+                        <div class="chart-bar bar-pplg" style="height: 90%;" title="Pengembangan Perangkat Lunak dan Gim (PPLG): 108 Orang">
+                            <span class="chart-bar-value">108</span>
+                        </div>
+                        <span class="chart-bar-label">PPLG</span>
+                    </div>
+                    <div class="chart-bar-container">
+                        <div class="chart-bar bar-tjkt" style="height: 60%;" title="Teknik Jaringan Komputer dan Telekomunikasi (TJKT): 72 Orang">
+                            <span class="chart-bar-value">72</span>
+                        </div>
+                        <span class="chart-bar-label">TJKT</span>
+                    </div>
+                    <div class="chart-bar-container">
+                        <div class="chart-bar bar-ap" style="height: 60%;" title="Agribisnis Perikanan (AP): 72 Orang">
+                            <span class="chart-bar-value">72</span>
+                        </div>
+                        <span class="chart-bar-label">AP</span>
+                    </div>
+                    <div class="chart-bar-container">
+                        <div class="chart-bar bar-nkpi" style="height: 60%;" title="Nautika Kapal Penangkap Ikan (NKPI): 72 Orang">
+                            <span class="chart-bar-value">72</span>
+                        </div>
+                        <span class="chart-bar-label">NKPI</span>
+                    </div>
+                    <div class="chart-bar-container">
+                        <div class="chart-bar bar-kl" style="height: 60%;" title="Kuliner (KL): 72 Orang">
+                            <span class="chart-bar-value">72</span>
+                        </div>
+                        <span class="chart-bar-label">KL</span>
+                    </div>
+                </div>
+
+                <!-- Legend -->
+                <div class="chart-legend">
+                    <div class="legend-item"><div class="legend-color color-to"></div> <span>TO: Teknik Otomotif</span></div>
+                    <div class="legend-item"><div class="legend-color color-pplg"></div> <span>PPLG: Pengembangan Perangkat Lunak dan Gim</span></div>
+                    <div class="legend-item"><div class="legend-color color-tjkt"></div> <span>TJKT: Teknik Jaringan Komputer dan Telekomunikasi</span></div>
+                    <div class="legend-item"><div class="legend-color color-ap"></div> <span>AP: Agribisnis Perikanan</span></div>
+                    <div class="legend-item"><div class="legend-color color-nkpi"></div> <span>NKPI: Nautika Kapal Penangkap Ikan</span></div>
+                    <div class="legend-item"><div class="legend-color color-kl"></div> <span>KL: Kuliner</span></div>
+                </div>
+            </div>
+
+            <div class="spmb-grid-layout mt-4">
+                <!-- Kolom Kiri: Alur Pendaftaran & Persyaratan -->
+                <div class="spmb-left-column" style="display: flex; flex-direction: column; gap: 2.5rem;">
+                    <!-- Card: Alur Pendaftaran -->
+                    <div class="spmb-card alur-card">
+                        <div class="card-header" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                            <i class="ph ph-calendar" style="font-size: 1.6rem; color: var(--primary, #2563eb);"></i>
+                            <h2 style="font-size: 1.4rem; font-weight: 700; color: var(--text-main, #0f172a); margin: 0;">Alur Pendaftaran</h2>
+                        </div>
+                        <div class="alur-timeline" style="margin: 0; padding-left: 1.5rem; max-width: 100%;">
+                            <!-- Tahap 1 -->
+                            <div class="alur-timeline-item active">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Pembuatan Akun</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 03 - 12 Juni 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-active">Sedang Berlangsung</span>
+                                </div>
+                            </div>
+
+                            <!-- Tahap 2 -->
+                            <div class="alur-timeline-item active">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Verifikasi Berkas & Aktivasi Akun</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 04 - 13 Juni 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-active">Sedang Berlangsung</span>
+                                </div>
+                            </div>
+
+                            <!-- Tahap 3 -->
+                            <div class="alur-timeline-item upcoming">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Sinkronisasi Data</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 14 Juni 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+
+                            <!-- Tahap 4 -->
+                            <div class="alur-timeline-item upcoming">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Pemilihan Sekolah</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 15 - 18 Juni 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+
+                            <!-- Tahap 5 -->
+                            <div class="alur-timeline-item upcoming">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Evaluasi & Masa Tenang</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 19 - 20 Juni 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+
+                            <!-- Tahap 6 -->
+                            <div class="alur-timeline-item upcoming">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Pengumuman Hasil Seleksi</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 21 Juni 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+
+                            <!-- Tahap 7 -->
+                            <div class="alur-timeline-item upcoming">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Daftar Ulang</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 22 - 25 Juni 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+
+                            <!-- Tahap 8 -->
+                            <div class="alur-timeline-item upcoming">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Pengumuman Cadangan</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 26 Juni 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+
+                            <!-- Tahap 9 -->
+                            <div class="alur-timeline-item upcoming">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Daftar Ulang Cadangan</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 29 - 30 Juni 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+
+                            <!-- Tahap 10 -->
+                            <div class="alur-timeline-item upcoming">
+                                <div class="alur-timeline-node"></div>
+                                <div class="alur-timeline-content">
+                                    <div class="alur-info">
+                                        <h3>Awal Masuk Sekolah</h3>
+                                        <span class="alur-date"><i class="ph ph-calendar"></i> 13 Juli 2026</span>
+                                    </div>
+                                    <span class="alur-status-badge status-upcoming">Akan Datang</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card: Persyaratan -->
+                    <div class="spmb-card requirements-card">
+                        <div class="card-header" style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                            <i class="ph ph-file-text" style="font-size: 1.6rem; color: var(--primary, #2563eb);"></i>
+                            <h2 style="font-size: 1.4rem; font-weight: 700; color: var(--text-main, #0f172a); margin: 0;">Persyaratan Dokumen</h2>
+                        </div>
+                        <ul class="requirements-list">
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Fotokopi Ijazah SMP/MTs atau surat keterangan lulus</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Fotokopi SKHUN atau transkrip nilai</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Fotokopi Kartu Keluarga</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Fotokopi Akta Kelahiran</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Pas foto berwarna ukuran 3x4 (4 lembar)</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Fotokopi KTP Orang Tua/Wali</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Surat keterangan sehat & tidak buta warna dari dokter</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Surat keterangan berkelakuan baik (SKBB) dari sekolah asal</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Fotokopi Kartu KIP / PKH / KPS (Khusus jalur Afirmasi)</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Fotokopi Piagam Penghargaan / Sertifikat Prestasi asli (Khusus jalur Prestasi)</span>
+                            </li>
+                            <li>
+                                <i class="ph ph-check-circle"></i>
+                                <span>Surat pernyataan keabsahan dokumen bermaterai Rp10.000</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Poster Resmi SPMB -->
+                <div class="spmb-right-column">
+                    <!-- Card: Poster SPMB -->
+                    <div class="spmb-card poster-card">
+                        <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; justify-content: center; color: var(--text-main, #0f172a);">
+                            <i class="ph ph-image" style="color: var(--primary, #2563eb); font-size: 1.5rem;"></i> Poster Resmi SPMB
+                        </h2>
+                        <a href="../assets/img/spmb/SPMB.webp" target="_blank" class="poster-link">
+                            <img src="../assets/img/spmb/SPMB.webp" alt="Poster SPMB SMKN 4 Kendal">
+                        </a>
+                        <p style="font-size: 0.88rem; color: var(--text-muted, #64748b); margin-bottom: 1.2rem; line-height: 1.5; text-align: center;">Klik poster untuk melihat dalam ukuran penuh.</p>
+                        <a href="../assets/img/spmb/SPMB.webp" download="Poster_SPMB_SMKN4Kendal.webp" class="btn btn-primary" style="width: 100%; justify-content: center; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.8rem 1.5rem; font-size: 0.95rem; border-radius: 50px; font-weight: 600; background: var(--primary, #2563eb); color: white; border: none; cursor: pointer; transition: all 0.3s ease;">
+                            <i class="ph ph-download-simple" style="font-size: 1.2rem;"></i> Unduh Poster Resmi
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PPDB Call to Action -->
+            <div class="cta-card mt-5">
+                <div class="cta-content">
+                    <h3>Siap bergabung dengan SKANIFO?</h3>
+                    <p>Jangan lewatkan kesempatan menjadi bagian dari generasi unggul. Daftar sekarang melalui portal
+                        resmi PPDB kami.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="https://spmb.jatengprov.go.id/" target="_blank" class="btn btn-outline-white">Daftar SPMB JATENG</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+    <script src="../assets/js/script.js?v=1.0.2"></script>
+</body>
+
+</html>

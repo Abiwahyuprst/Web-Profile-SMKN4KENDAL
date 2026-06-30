@@ -1,0 +1,401 @@
+/* === Kontak Kami Specific Styles === */
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-card {
+    background: var(--bg-white, #ffffff);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.05));
+    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    box-shadow: var(--shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1));
+}
+
+.contact-card h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-main, #0f172a);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+}
+
+.contact-card h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary, #2563eb); /* Blue Theme */
+    border-radius: 2px;
+}
+
+/* Override header style for the message card so it matches the design */
+.message-card-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary, #2563eb);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0;
+}
+.message-card-header h2::after {
+    display: none;
+}
+
+/* Alert Info Box */
+.alert-info {
+    background: rgba(37, 99, 235, 0.08); /* Light Blue Background */
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.alert-info i {
+    color: var(--primary, #2563eb);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+.alert-info p {
+    color: var(--text-muted, #475569);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* Info List */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.info-item {
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+}
+
+.info-icon {
+    font-size: 1.4rem;
+    color: var(--primary, #2563eb); /* Blue Theme */
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.info-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main, #0f172a);
+}
+
+.info-text {
+    font-size: 0.9rem;
+    color: var(--text-muted, #64748b);
+    line-height: 1.6;
+}
+
+/* Social Media Card */
+.social-card {
+    padding: 2rem 2.5rem;
+}
+
+.social-card h2 {
+    margin-bottom: 1.2rem;
+}
+
+.social-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-btn {
+    width: 44px;
+    height: 44px;
+    background: var(--bg-light, #f8fafc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted, #64748b);
+    font-size: 1.25rem;
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.05));
+    transition: var(--transition);
+}
+
+.social-btn:hover {
+    background: var(--primary, #2563eb); /* Blue Theme */
+    color: white;
+    border-color: var(--primary, #2563eb);
+    transform: translateY(-2px);
+}
+
+/* Contact Right Column */
+.contact-right {
+    height: 100%;
+}
+
+.message-card {
+    height: 100%;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main, #0f172a);
+}
+
+.form-group input,
+.form-group textarea {
+    background: var(--bg-white, #ffffff); /* White Background */
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--text-main, #0f172a);
+    outline: none;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a0aec0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary, #2563eb);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 180px;
+}
+
+/* Submit Button */
+.btn-submit {
+    align-self: flex-start;
+    background: var(--primary, #2563eb); /* Blue Theme */
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: var(--transition);
+}
+
+.btn-submit i {
+    font-size: 1.1rem;
+}
+
+.btn-submit:hover {
+    background: var(--primary-dark, #1d4ed8); /* Darker Blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-left {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 1.8rem;
+    }
+}
+
+/* === Peta Lokasi Kami Styles === */
+.contact-map-card {
+    background: var(--bg-white, #ffffff);
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid var(--border-color, rgba(0, 0, 0, 0.05));
+    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+    margin: 3rem auto 0;
+    max-width: 1200px; /* Aligns perfectly with the grid columns above */
+    transition: var(--transition);
+}
+
+.contact-map-card:hover {
+    box-shadow: var(--shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1));
+}
+
+.contact-map-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact-map-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 750px;
+    text-align: left;
+}
+
+.contact-map-header h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-main, #0f172a);
+    margin: 0;
+    position: relative;
+    padding-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-map-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary, #2563eb);
+    border-radius: 2px;
+}
+
+.contact-map-subtitle {
+    font-size: 0.92rem;
+    color: var(--text-muted, #64748b);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.btn-map-shortcut {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bg-white, #ffffff);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0.7rem 1.4rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary, #2563eb);
+    text-decoration: none;
+    transition: var(--transition, all 0.3s ease);
+    cursor: pointer;
+    white-space: nowrap;
+    align-self: flex-end;
+}
+
+.btn-map-shortcut:hover {
+    background: var(--primary, #2563eb);
+    color: white;
+    border-color: var(--primary, #2563eb);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.map-container {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid #0f172a; /* Nice clean dark border */
+    position: relative;
+    height: 450px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .contact-map-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn-map-shortcut {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-map-card {
+        padding: 1.8rem;
+        margin-top: 2rem;
+    }
+    .map-container {
+        height: 300px;
+    }
+}

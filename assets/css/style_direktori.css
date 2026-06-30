@@ -1,0 +1,131 @@
+/* === Direktori GTK Specific Styles === */
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.staff-card {
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--border-color, #e2e8f0);
+    text-align: center;
+    padding-bottom: 2rem;
+    transition: var(--transition, all 0.3s ease);
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md, 0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.staff-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    margin: 2rem auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.staff-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main, #0f172a);
+    margin-bottom: 0.2rem;
+    padding: 0 1rem;
+    line-height: 1.4;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 1.1rem 1.8rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    border: 2px solid rgba(226, 232, 240, 0.8);
+    background-color: var(--bg-white, #ffffff);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    color: var(--text-main, #0f172a);
+}
+
+.search-bar input:focus {
+    border-color: var(--primary, #2563eb);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.12);
+    transform: translateY(-2px);
+}
+
+.search-bar input::placeholder {
+    color: var(--text-muted, #64748b);
+    opacity: 0.8;
+    font-size: 1.2rem;
+}
+
+.search-bar .btn-primary {
+    padding: 0 2.8rem !important;
+    font-size: 1.2rem !important;
+    border-radius: 50px !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.search-bar .btn-primary i {
+    font-size: 1.35rem;
+}
+
+.search-bar .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3) !important;
+}
+
+.search-bar .btn-primary:active {
+    transform: translateY(0) !important;
+}
+
+@media (max-width: 640px) {
+    .search-bar {
+        flex-direction: column;
+        gap: 0.8rem;
+        max-width: 100%;
+    }
+    
+    .search-bar input {
+        padding: 0.9rem 1.4rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+    
+    .search-bar input:focus {
+        transform: none;
+    }
+    
+    .search-bar .btn-primary {
+        padding: 0.9rem 2rem !important;
+        font-size: 1rem !important;
+        width: 100%;
+        height: 52px;
+    }
+    
+    .search-bar .btn-primary:hover {
+        transform: none !important;
+    }
+}
