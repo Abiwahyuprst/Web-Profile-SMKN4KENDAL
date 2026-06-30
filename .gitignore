@@ -1,0 +1,13 @@
+# Mengabaikan folder konfigurasi teks editor (VS Code, dll)
+.vscode/
+.idea/
+
+# Mengabaikan file log / catatan error otomatis
+*.log
+
+# Mengabaikan file sampah bawaan sistem operasi (Windows/Mac)
+Thumbs.db
+.DS_Store
+
+# Mengabaikan file backup atau temporary dari XAMPP jika ada
+*.tmp
